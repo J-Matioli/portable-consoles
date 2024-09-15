@@ -1,0 +1,30 @@
+{
+  "name": "portable-consoles",
+  "version": "1.0.0",
+  "main": "index.js",
+  "sideEffects": [
+    "src/index.d.ts"
+  ],
+  "scripts": {
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --runInBand src",
+    "test:watch": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --runInBand --watchAll src",
+    "build": "node esbuild.config.js",
+    "start": "node esbuild_watch.config.js"
+  },
+  "author": "JMatioli",
+  "license": "MIT",
+  "description": "",
+  "type": "module",
+  "devDependencies": {
+    "@compodoc/live-server": "^1.2.3",
+    "autoprefixer": "^10.4.20",
+    "cross-env": "^7.0.3",
+    "esbuild": "0.16.17",
+    "esbuild-plugin-copy": "^2.1.1",
+    "esbuild-sass-plugin": "2.4.5",
+    "jest": "^29.7.0",
+    "postcss": "^8.4.47",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2"
+  }
+}

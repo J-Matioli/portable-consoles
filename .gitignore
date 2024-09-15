@@ -1,0 +1,58 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Diretórios do ambiente de desenvolvimento
+node_modules/
+bower_components/
+
+# Compilações e builds
+dist/
+build/
+out/
+
+# Cache
+.cache/
+.tmp/
+.temporary/
+.pnpm-store/
+.pnpm-debug.log
+
+# Arquivos de pacotes e lockfiles
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Diretórios e arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editor de texto ou IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Testes
+coverage/
+*.test.js
+*.spec.js
+jest/
+
+# Arquivos de configuração locais e variáveis de ambiente
+.env
+.env.local
+.env.*.local
+
+# Relacionados ao ESLint ou Prettier
+.eslintcache
+.prettierignore
+.prettiercache
+
+# Outros arquivos de configuração locais
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

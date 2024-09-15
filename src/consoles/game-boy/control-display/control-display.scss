@@ -1,0 +1,60 @@
+.control-display {
+    flex: 1;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    border: solid 8px #4a4a4a;
+    box-shadow: 7px 12px 10px 0px black;
+
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+@media(max-width: 767px) {
+    .control-display {
+        border: solid 8px #039DA4;
+        box-shadow: 7px 12px 10px 0px black;
+        grid-column: 1 / -1;
+    }
+}
+
+.load-bar {
+    margin-top: 10px;
+    height: 2px;
+    background-color: white;
+    width: 100%;
+    animation: loading 5s ease;
+    align-self: flex-start;
+}
+.load-text {
+    font-family: 'Recursive', sans-serif;
+    color: white;
+
+    animation: blink-animation 2s steps(5, start);
+    -webkit-animation: blink-animation 2s steps(5, start);
+    animation-iteration-count: 3;
+    -webkit-animation-iteration-count: 3;
+}
+
+
+@keyframes loading {
+    0%   {width: 0;}
+    25%  {width: 10%;}
+    50%  {width: 10%;}
+    75%  {width: 65%;}
+    100% {width: 80%;}
+}
+
+@keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
