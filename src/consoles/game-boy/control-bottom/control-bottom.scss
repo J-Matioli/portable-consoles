@@ -2,11 +2,18 @@
     background-color: #039DA4;
     width: 100%;
     height: 200px;
-    display: none;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 0 0 45px 10px;
+    box-shadow: 7px 12px 10px 0px black;
 
     grid-column: 1 / -1;
     grid-row: 2 / -1;
     z-index: 1;
+
+    @media(min-width: 767px) {
+        display: none;
+    }
 }
 
 .gameboy-arrows {
@@ -15,14 +22,4 @@
 
 .gameboy-buttons {
     width: 27%;
-}
-
-
-@media(max-width: 767px) {
-    .control-botton {
-        display: flex;
-        justify-content: space-around;
-        border-radius: 0 0 45px 10px;
-        box-shadow: 7px 12px 10px 0px black;
-    }
 }

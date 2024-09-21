@@ -4,6 +4,10 @@
     box-shadow: 10px 12px 10px 0px black;
     grid-column: 3 / -1;
     grid-row: 1 / 2;
+
+    @media(max-width: 767px) {
+        display: none !important;
+    }
 }
 
 .pad {
@@ -24,10 +28,4 @@
 }
 .analogico {
     width: 60%;
-}
-
-@media(max-width: 767px) {
-    .control-right {
-        display: none !important;
-    }
 }

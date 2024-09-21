@@ -1,4 +1,4 @@
-.control-display {
+.switch-control-display {
     flex: 1;
     background-color: black;
     display: flex;
@@ -11,13 +11,9 @@
 
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-}
 
-@media(max-width: 767px) {
-    .control-display {
-        border: solid 8px #039DA4;
-        box-shadow: 7px 12px 10px 0px black;
-        grid-column: 1 / -1;
+    @media(max-width: 767px) {
+      display: none;  
     }
 }
 

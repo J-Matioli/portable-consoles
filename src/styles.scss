@@ -23,16 +23,9 @@ html, body { height: 100%; }
 body {
     background-color: #2d2d2d;
 }
+
 .control-frame {
-    margin: 0 auto;
-    margin-top: 20px;
-    width: 70%;
-    height: 400px;
-    max-height: 65vh;
-    display: grid;
-    grid-template-columns: max-content 1fr max-content;
-    grid-template-rows: auto;
-    justify-content: center;
+    width: 100%;    
 }
 
 @media(max-width: 991px) {

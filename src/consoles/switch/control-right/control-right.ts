@@ -1,8 +1,11 @@
 import template from "./control-right.html";
 import "./control-right.scss";
 
-export function renderControlRight() {    
-    const controlFrame = document.querySelector(".control-frame");
-    const templateFragment = document.createRange().createContextualFragment(template);
-    controlFrame.appendChild(templateFragment)
+export class ControlRight {
+    constructor(){ };
+
+    renderControlRight() {    
+        const controlFrame = document.querySelector(".n-switch");
+        controlFrame.innerHTML += template;
+    }
 }
