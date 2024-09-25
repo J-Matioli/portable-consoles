@@ -1,29 +1,9 @@
 .control-left {
     background-color: #4CC6E8;
-    border-radius: 40px 0 0 50px;
-    box-shadow: 12px 12px 10px 0px black;
+    border-top-left-radius: 77% 23%;
+    border-bottom-left-radius: 50% 20%;
     
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-
-    @media(max-width: 767px) {
-        display: none !important;
-    }
-}
-
-.pad {
-    width: 110px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.buttons {
-    width: 70%;
-    margin-bottom: 40px;
-}
-
-.analogico {
-    width: 60%;
+    justify-self: end;
 }

@@ -11,7 +11,7 @@ export default class NGameBoy {
     private ControlBottom:ControlBottom = new ControlBottom();
     private controlDisplay:ControlDisplay = new ControlDisplay();
 
-    private controlFrame = document.querySelector(".control-frame");
+    private controlFrame = document.querySelector(".container");
 
     startConsole() {
 

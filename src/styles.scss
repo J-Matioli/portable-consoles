@@ -8,36 +8,18 @@
 
 html {
   box-sizing: border-box;
+  background-color: #2d2d2d;
 }
 
-html, body { height: 100%; }
+html, body { height: 100vh; }
 
 .container {
-    height: 100vh;
+    margin: auto;
+    padding: 0 15px;
+    max-width: 90%;
+    height: 100%;
+
     display: grid;
     align-content: center;
     justify-items: center;
-
-}
-
-body {
-    background-color: #2d2d2d;
-}
-
-.control-frame {
-    width: 100%;    
-}
-
-@media(max-width: 991px) {
-    .control-frame {
-        width: 98%;
-    }
-}
-
-@media(max-width: 576px) {
-    .control-frame {
-        width: 80%;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, auto);
-    }
 }

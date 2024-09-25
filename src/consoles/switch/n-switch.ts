@@ -14,7 +14,7 @@ export default class NSwitch {
     private controlRight:ControlRight = new ControlRight();
     private controlDisplay:ControlDisplay = new ControlDisplay();
 
-    private controlFrame = document.querySelector(".control-frame");
+    private controlFrame = document.querySelector(".container");
 
     startConsole() {
         

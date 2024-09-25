@@ -1,20 +1,17 @@
 .switch-control-display {
     flex: 1;
     background-color: black;
+    width: 39vw;
+    max-width: 695px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 0 40px;
     border: solid 8px #4a4a4a;
-    box-shadow: 7px 12px 10px 0px black;
 
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-
-    @media(max-width: 767px) {
-      display: none;  
-    }
 }
 
 .load-bar {
