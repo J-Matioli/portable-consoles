@@ -11,7 +11,7 @@ nSwitch.startConsole();
 const nGameBoy = new NGameBoy();
 nGameBoy.startConsole();
 
-window.addEventListener('resize', _ => {
-    nSwitch.restartConsole();
-    nGameBoy.restartConsole();
-}, true);
+// window.addEventListener('resize', _ => {
+//     nSwitch.restartConsole();
+//     nGameBoy.restartConsole();
+// }, true);

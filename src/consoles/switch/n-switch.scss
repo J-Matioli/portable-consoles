@@ -23,6 +23,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    overflow: hidden;
+    position: relative;
 }
 
 .buttons {
@@ -33,6 +35,8 @@
 .analogico {
     width: 5vw;
     height: 5vw;
+    max-width: 90px;
+    max-height: 90px;
 
     &__background {
         width: 100%;

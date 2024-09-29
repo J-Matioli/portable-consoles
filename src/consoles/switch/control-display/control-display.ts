@@ -19,8 +19,6 @@ export class ControlDisplay {
         const controlDisplay: HTMLElement = document.querySelector(".switch-control-display");        
         const iframe = document.createElement('iframe');
         
-        controlDisplay.style["padding"] = "0 15px";
-
         iframe.setAttribute('src', 'https://nintendo.com');    
         iframe.style["width"] = "100%";
         iframe.style["height"] = "100%";

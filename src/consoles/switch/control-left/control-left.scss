@@ -1,9 +1,42 @@
 .control-left {
-    background-color: #4CC6E8;
+    box-shadow: inset 3px -1px 2px #2b7e93;
+    border-right: 5px solid #3992a9;
+    background: rgb(76,198,232);
+    background: linear-gradient(0deg, rgba(76,198,232,1) 0%, rgba(76,232,209,1) 100%);
     border-top-left-radius: 77% 23%;
     border-bottom-left-radius: 50% 20%;
     
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     justify-self: end;
+
+    &::before {
+        content: "";
+        background-color: rgba(150, 249, 249, 0.478);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        clip-path: path("M 0 0 H153 V16 C72 13 31 18 0 67 z");
+
+        @media screen and (max-width: 1400px) {
+            clip-path: path("M 0 0 H111 V13 C45 4 18 22 0 50 z");
+        }
+    }
+
+    &::after {
+        content: "";
+        background-color: rgba(57, 146, 169, 0.361);
+        width: 100%;
+        height: 38px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        clip-path: path("M 0 48 H153 V26 C10 27 45 8 0 0 z");
+
+        @media screen and (max-width: 1400px) {
+            clip-path: path("M 0 49 H143 V32 C-47 20 49 10 -32 3 z");
+        }
+    }
 }
