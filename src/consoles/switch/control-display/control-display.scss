@@ -9,6 +9,8 @@
     flex-direction: column;
     padding: 1.1rem;
     border: solid 8px #4a4a4a;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -17,14 +19,14 @@
 .load-bar {
     margin-top: 10px;
     height: 2px;
-    background-color: white;
+    background-color: #fff;
     width: 100%;
     animation: loading 5s ease;
     align-self: flex-start;
 }
 .load-text {
     font-family: 'Recursive', sans-serif;
-    color: white;
+    color: #fff;
 
     animation: blink-animation 2s steps(5, start);
     -webkit-animation: blink-animation 2s steps(5, start);

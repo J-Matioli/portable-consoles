@@ -1,8 +1,8 @@
 .control-left {
     box-shadow: inset 3px -1px 2px #2b7e93;
     border-right: 5px solid #3992a9;
-    background: rgb(76,198,232);
-    background: linear-gradient(0deg, rgba(76,198,232,1) 0%, rgba(76,232,209,1) 100%);
+    background: #4cc6e8;
+    background: linear-gradient(0deg, #4cc6e8 0%, #4ce8d1 100%);
     border-top-left-radius: 77% 23%;
     border-bottom-left-radius: 50% 20%;
     
@@ -10,14 +10,18 @@
     grid-row: 1 / 2;
     justify-self: end;
 
-    &::before {
+    &::before,
+    &::after {
         content: "";
-        background-color: rgba(150, 249, 249, 0.478);
         width: 100%;
-        height: 100%;
         position: absolute;
-        top: 0;
         left: 0;
+    }
+
+    &::before {
+        background-color: #70efe4;
+        height: 100%;
+        top: 0;        
         clip-path: path("M 0 0 H153 V16 C72 13 31 18 0 67 z");
 
         @media screen and (max-width: 1400px) {
@@ -26,17 +30,62 @@
     }
 
     &::after {
-        content: "";
-        background-color: rgba(57, 146, 169, 0.361);
-        width: 100%;
+        background-color: #46b4d1;
         height: 38px;
-        position: absolute;
         bottom: 0;
-        left: 0;
         clip-path: path("M 0 48 H153 V26 C10 27 45 8 0 0 z");
 
         @media screen and (max-width: 1400px) {
             clip-path: path("M 0 49 H143 V32 C-47 20 49 10 -32 3 z");
+        }
+    }
+}
+
+.button {
+    &__arrow {
+        background-color: #000;
+        border-bottom: 2px solid #585858;
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+
+    &--up {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+
+        .button__arrow {
+            transform: translate(-50%);
+        }
+    }
+
+    &--right {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+
+        .button__arrow {
+            transform: translate(-50%) rotate(90deg);
+        }
+    }
+
+    &--down {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+
+        .button__arrow {
+            transform: translate(-50%) rotate(180deg);
+        }
+    }
+
+    &--left {
+        grid-column: 1 / 1;
+        grid-row: 2 / 3;
+
+        .button__arrow {
+            transform: translate(-50%) rotate(270deg);
         }
     }
 }
