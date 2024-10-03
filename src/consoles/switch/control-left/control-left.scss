@@ -1,8 +1,8 @@
 .control-left {
-    box-shadow: inset 3px -1px 2px #2b7e93;
-    border-right: 5px solid #3992a9;
-    background: #4cc6e8;
-    background: linear-gradient(0deg, #4cc6e8 0%, #4ce8d1 100%);
+    box-shadow: inset 3px -1px 2px var(--primary-color-dark-2);
+    border-right: 5px solid var(--primary-color-dark-1);
+    background: var(--primary-color);
+    background: var(--primary-gradient);
     border-top-left-radius: 77% 23%;
     border-bottom-left-radius: 50% 20%;
     
@@ -19,7 +19,7 @@
     }
 
     &::before {
-        background-color: #70efe4;
+        background-color: var(--primary-color-light-1);
         height: 100%;
         top: 0;        
         clip-path: path("M 0 0 H153 V16 C72 13 31 18 0 67 z");
@@ -30,7 +30,7 @@
     }
 
     &::after {
-        background-color: #46b4d1;
+        background-color: var(--primary-color-dark-1) ;
         height: 38px;
         bottom: 0;
         clip-path: path("M 0 48 H153 V26 C10 27 45 8 0 0 z");
