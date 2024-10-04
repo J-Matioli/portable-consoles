@@ -2,22 +2,22 @@
     width: 1.8vw;
     height: 1.8vw;
     border-radius: 50%;
-    background: rgb(49 49 49);
+    background: var(--grey-dark-3);
 
-    border-top: .4vw solid #5b5959;
-    box-shadow: -1px 5px 7px 0px #0000009c;
+    border-top: .4vw solid var(--grey-dark-1);
+    box-shadow: -1px 5px 7px 0px rgba(0, 0, 0, 0.612);
 
     position: relative;
 
     &__content {
         font-family: "Roboto", sans-serif;
-        color: #fff;
+        color: var(--white);
         font-size: 0.7vw;
     }
 
     &__arrow {
-        background-color: #000;
-        border-bottom: 2px solid #585858;
+        background-color: var(--black);
+        border-bottom: 2px solid var(--grey-dark-1);
         width: 50%;
         height: 50%;
         position: absolute;
