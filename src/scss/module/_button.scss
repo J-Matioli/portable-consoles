@@ -8,4 +8,87 @@
     box-shadow: -1px 5px 7px 0px #0000009c;
 
     position: relative;
+
+    &__content {
+        font-family: "Roboto", sans-serif;
+        color: #fff;
+        font-size: 0.7vw;
+    }
+
+    &__arrow {
+        background-color: #000;
+        border-bottom: 2px solid #585858;
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+
+    &--x,
+    &--b,
+    &--a,
+    &--y {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    &--x {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    &--a {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+    }
+
+    &--b {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+
+    &--y {
+        grid-column: 1 / 1;
+        grid-row: 2 / 3;
+    }
+
+    &--up {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+
+        .button__arrow {
+            transform: translate(-50%);
+        }
+    }
+
+    &--right {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+
+        .button__arrow {
+            transform: translate(-50%) rotate(90deg);
+        }
+    }
+
+    &--down {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+
+        .button__arrow {
+            transform: translate(-50%) rotate(180deg);
+        }
+    }
+
+    &--left {
+        grid-column: 1 / 1;
+        grid-row: 2 / 3;
+
+        .button__arrow {
+            transform: translate(-50%) rotate(270deg);
+        }
+    }
 }
