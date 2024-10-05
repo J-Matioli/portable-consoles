@@ -1,0 +1,41 @@
+:root.splatoon-theme {
+    --container-background-color: #2d2d2d;
+
+    --primary-color: #6932bf;
+    
+    --primary-color-dark-1: #471c95;
+    --primary-color-dark-2: #311c6f;
+    --primary-color-dark-3: #2b3193;
+    
+    --primary-color-light-1: #4c4ae1;
+    
+    --primary-color-variant: #2032af;
+    
+    --primary-gradient: linear-gradient(to top, var(--primary-color), var(--primary-color-variant));
+    
+    --secondary-color: #5b8742;
+    
+    --secondary-color-dark-1: #557931;
+    --secondary-color-dark-2: #47651c;
+    --secondary-color-dark-3: #33551b;
+
+    --secondary-color-light-1: #d7d95e;
+    
+    --secondary-color-variant: #e8e44c;
+
+    --secondary-gradient: linear-gradient(to top, var(--secondary-color), var(--secondary-color-variant));
+
+    --grey-dark-1: #575757;
+    --grey-dark-2: #4b4b4b;
+    --grey-dark-3: #373737;
+    --grey-dark-4: #252525;
+
+    --white: #fff;
+    --black: #000;
+    --dark-gradient-1: linear-gradient(28deg, rgba(37,37,37,1) 20%, #393939 69%, rgba(96,96,96,1) 89%, rgba(125,125,125,1) 100%);
+    --dark-gradient-2: linear-gradient(28deg, rgba(37,37,37,1) 20%, rgba(57,57,57,1) 69%, rgba(54,54,54,1) 100%);
+}
+
+body {     
+    background-color: var(--container-background-color);
+}
