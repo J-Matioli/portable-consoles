@@ -39,6 +39,12 @@
         }
     }
 
+    &__plus {
+        position: absolute;
+        top: 5%;
+        left: 8%;
+    }
+
     &__buttons {
         display: grid;
         grid-template-columns: repeat(3, 1fr);

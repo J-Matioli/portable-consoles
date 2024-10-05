@@ -7,6 +7,7 @@
     border-top: .3vw solid var(--grey-dark-1);
     box-shadow: -1px 5px 7px 0px rgba(0, 0, 0, 0.612);
 
+    cursor: pointer;
     position: relative;
 
     &__content {
@@ -33,6 +34,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        user-select: none;
     }
 
 
@@ -96,9 +98,6 @@
         height: 0.5vw;
         width: 1.3vw;
         border-radius: 10px;
-        position: absolute;
-        top: 9%;
-        right: 8%;
     }
 
     &--plus {
@@ -106,9 +105,6 @@
         border: none;
         border-radius: 0;
         box-shadow: none;
-        position: absolute;
-        top: 9%;
-        left: 8%;
 
         filter: drop-shadow(-1px 3px 1px rgba(0, 0, 0, 0.3));
 
@@ -154,6 +150,7 @@
         &::before {
             content: "";
             left: 50%;
+            top: 0;
             transform: translate(-50%);
             position: absolute;
             width: 90%;
