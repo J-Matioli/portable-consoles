@@ -15,20 +15,3 @@
         display: none !important;
     }
 }
-
-.pad {
-    max-width: 151px;
-    width: 54%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    overflow: hidden;
-    position: relative;
-}
-
-.buttons {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, auto);
-}

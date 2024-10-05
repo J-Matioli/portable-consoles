@@ -39,4 +39,32 @@
             clip-path: path("M 0 49 H143 V32 C-47 20 49 10 -32 3 z");
         }
     }
+
+    &__analogic {
+        position: absolute;
+        top: 17%;
+        left: 55%;
+        transform: translate(-50%);
+    }
+
+    &__buttons {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        width: 5vw;
+        height: 5vw;
+        top: 41%;
+        position: absolute;
+        left: 52%;
+        transform: translate(-50%);
+    }
+
+    &__square {
+        position: absolute;
+        right: 13%;
+        top: 69%;
+
+        width: 1.4vw;
+        height: 1.4vw;
+    }
 }

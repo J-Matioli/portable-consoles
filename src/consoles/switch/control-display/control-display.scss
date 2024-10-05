@@ -14,17 +14,17 @@
 
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-}
 
-.load-bar {
-    margin-top: 10px;
-    height: 2px;
-    background-color: #fff;
-    width: 100%;
-    animation: loading 5s ease;
-    align-self: flex-start;
-}
-.load-text {
+    &__load-bar {
+      margin-top: 10px;
+      height: 2px;
+      background-color: #fff;
+      width: 100%;
+      animation: loading 5s ease;
+      align-self: flex-start;
+  }
+
+  &__load-text {
     font-family: 'Recursive', sans-serif;
     color: #fff;
 
@@ -32,8 +32,8 @@
     -webkit-animation: blink-animation 2s steps(5, start);
     animation-iteration-count: 3;
     -webkit-animation-iteration-count: 3;
+  }
 }
-
 
 @keyframes loading {
     0%   {width: 0;}
