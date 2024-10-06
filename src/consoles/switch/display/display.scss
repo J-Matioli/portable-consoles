@@ -3,17 +3,32 @@
     background-color: black;
     width: 39vw;
     max-width: 695px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     padding: 1.1rem;
     border: solid 8px var(--grey-dark-2);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    
+    &__screen {     
+      filter: opacity(0);
+      background-color: #000;  
+      
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    &__load {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
 
     &__load-bar {
       margin-top: 10px;

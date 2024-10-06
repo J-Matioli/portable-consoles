@@ -1,4 +1,4 @@
-export default class Theme {
+export default class ThemeController {
 
     private root = document.querySelector(':root');
 

@@ -1,6 +1,7 @@
 import template from "./n-switch.html";
 
-import { ControlDisplay } from "./control-display/control-display.ts";
+import BrightnessController from "./controllers/brightness";
+import { Display } from "./display/display";
 import { ControlLeft } from "./control-left/control-left.ts";
 import { ControlRight } from "./control-right/control-right.ts";
 
@@ -8,39 +9,50 @@ import "./n-switch.scss";
 
 export default class NSwitch {
 
-    constructor() {};
+    private container;
+    private nswitch: HTMLDivElement;
+    private brightess: BrightnessController;
+    private consoleDisplay:Display;
+    private controlLeft: ControlLeft;
+    private controlRight:ControlRight;
 
-    private controlLeft: ControlLeft = new ControlLeft();
-    private controlRight:ControlRight = new ControlRight();
-    private controlDisplay:ControlDisplay = new ControlDisplay();
+    constructor() {
+        this.container = document.querySelector(".container");
+        this.container.insertAdjacentHTML('afterbegin', template);
 
-    private controlFrame = document.querySelector(".container");
+        this.nswitch = this.container.querySelector('.n-switch');
+    }; 
+    
 
     startConsole() {
-        
-        this.controlFrame.insertAdjacentHTML('afterbegin', template)
 
-        this.controlDisplay.renderControlDisplay();
+        this.consoleDisplay = new Display(this.nswitch);
+        this.brightess = new BrightnessController(this.consoleDisplay.renderDisplay());
+        
+        this.controlLeft = new ControlLeft(this.brightess, this.nswitch);
+        this.controlRight = new ControlRight(this.brightess, this.nswitch);
+        
         this.controlLeft.renderControlLeft();
         this.controlRight.renderControlRight();
+
         
         setTimeout(() => {  
             this.removeLoading();
-            // this.createGame(); 
+            this.createGame(); 
         }, 5500)
     }
 
     removeLoading() {
-        this.controlDisplay.removeLoading();
+        this.consoleDisplay.removeLoading();
     }
 
     createGame() {
-        this.controlDisplay.createGame()
+        this.consoleDisplay.createGame()
     }
 
     closeConsole() {
         const templateHtml = document.querySelector(".n-switch");
-        this.controlFrame.removeChild(templateHtml);
+        this.container.removeChild(templateHtml);
     }
 
     restartConsole() {
