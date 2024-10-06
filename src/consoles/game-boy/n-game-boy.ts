@@ -15,14 +15,14 @@ export default class NGameBoy {
 
     startConsole() {
 
-        this.controlFrame.innerHTML += template;
+        this.controlFrame.insertAdjacentHTML('afterbegin', template)
 
         this.controlDisplay.renderControlDisplay();
         this.ControlBottom.renderControlBottom();
 
         setTimeout(() => {  
             this.removeLoading();
-            this.createGame(); 
+            // this.createGame();
         }, 5500)
     }
     

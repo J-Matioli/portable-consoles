@@ -1,9 +1,9 @@
 {
     "compilerOptions": {
-      "resolveJsonModule": true,
       "esModuleInterop": true,
       "noEmit": true,
       "allowImportingTsExtensions": true,
+      "target": "ES6"
     }
   }
   

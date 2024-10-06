@@ -18,7 +18,7 @@ export default class NSwitch {
 
     startConsole() {
         
-        this.controlFrame.innerHTML += template;
+        this.controlFrame.insertAdjacentHTML('afterbegin', template)
 
         this.controlDisplay.renderControlDisplay();
         this.controlLeft.renderControlLeft();
@@ -26,7 +26,7 @@ export default class NSwitch {
         
         setTimeout(() => {  
             this.removeLoading();
-            this.createGame(); 
+            // this.createGame(); 
         }, 5500)
     }
 
