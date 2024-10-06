@@ -19,6 +19,7 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      position: relative;
     }
 
     &__load {
@@ -28,6 +29,11 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      background-color: #000;
+
+      position: absolute;
+      top: 0;
+      left: 0;
     }
 
     &__load-bar {
