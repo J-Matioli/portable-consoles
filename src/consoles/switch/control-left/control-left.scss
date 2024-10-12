@@ -63,6 +63,8 @@
         position: absolute;
         left: 52%;
         transform: translate(-50%);
+        max-width: 89px;
+        max-height: 89px;
     }
 
     &__square {
@@ -72,5 +74,7 @@
 
         width: 1.4vw;
         height: 1.4vw;
+        max-width: 25px;
+        max-height: 25px;
     }
 }

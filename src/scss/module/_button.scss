@@ -3,6 +3,8 @@
 .button { 
     width: 1.8vw;
     height: 1.8vw;
+    max-width: 32px;
+    max-height: 32px;
     border-radius: 50%;
     background: var(--grey-dark-3);
 
@@ -17,6 +19,10 @@
         font-family: "Roboto", sans-serif;
         color: var(--white);
         font-size: 0.7vw;
+
+        @media screen and (min-width: 1700px) {
+            font-size: 13px;
+        }
     }
 
     &__arrow {
@@ -37,7 +43,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        user-select: none;
+        user-select: none;        
     }
 
 
@@ -100,6 +106,8 @@
     &--minus {
         height: .5vw;
         width: 1.3vw;
+        max-width: 23px;
+        max-height: 9px;
         border-radius: 10px;
         box-shadow: -2px 2px 2px #00000073;
     }
@@ -116,6 +124,8 @@
         .button__content-v {
             height: 0.4vw;
             width: 1.3vw;
+            max-width: 22px;
+            max-height: 7px;
             border-radius: 10px;
             background: var(--grey-dark-3);
             position: absolute;
