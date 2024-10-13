@@ -1,14 +1,11 @@
 .n-game-boy {
-    margin: 0 auto;
-    margin-top: 20px;
-    width: 70%;
-    height: 400px;
-    max-height: 65vh;
-    display: grid;
-    grid-template-columns: max-content 1fr max-content;
-    grid-template-rows: auto;
-    justify-content: center;
-
+    height: 96vw;
+    width: 62vw;
+    max-height: 550px;
+    max-width: 355px;
+    display: flex;
+    flex-direction: column;
+    
     @media(min-width: 767px) {
         display: none;      
     }
