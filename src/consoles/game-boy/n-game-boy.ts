@@ -1,5 +1,5 @@
 import template from "./n-game-boy.html";
-import { ControlDisplay } from "./control-display/control-display.ts";
+import { ControlDisplay } from "./display/display.ts";
 import { ControlBottom } from "./control-bottom/control-bottom.ts";
 
 import "./n-game-boy.scss";

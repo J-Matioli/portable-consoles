@@ -1,5 +1,5 @@
-import template from "./control-display.html";
-import "./control-display.scss";
+import template from "./display.html";
+import "./display.scss";
 
 export class ControlDisplay {
     
