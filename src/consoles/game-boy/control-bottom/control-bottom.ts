@@ -2,10 +2,12 @@ import template from "./control-bottom.html";
 import "./control-bottom.scss";
 
 export class ControlBottom {
-    constructor(){ };
+    private nGameBoy: HTMLDivElement
+    constructor(nGameBoy: HTMLDivElement){
+        this.nGameBoy = nGameBoy
+     };
 
     renderControlBottom() {
-        const controlFrame = document.querySelector(".n-game-boy");
-        controlFrame.innerHTML += template
+        this.nGameBoy.insertAdjacentHTML('beforeend', template);
     }
 }

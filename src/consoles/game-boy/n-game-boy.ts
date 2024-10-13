@@ -1,46 +1,37 @@
 import template from "./n-game-boy.html";
-import { ControlDisplay } from "./display/display.ts";
+import { Display } from "./display/display.ts";
 import { ControlBottom } from "./control-bottom/control-bottom.ts";
 
 import "./n-game-boy.scss";
+import CoreController from "./controllers/core";
 
 export default class NGameBoy {
 
-    constructor() {};
+    private container;
+    private nGameBoy: HTMLDivElement;
+    private consoleDisplay:Display;
+    private core: CoreController    
+    private controlBottom:ControlBottom;
 
-    private ControlBottom:ControlBottom = new ControlBottom();
-    private controlDisplay:ControlDisplay = new ControlDisplay();
 
-    private controlFrame = document.querySelector(".container");
+    constructor() {
+        this.container = document.querySelector(".container");
+        this.container.insertAdjacentHTML('afterbegin', template);
+
+        this.nGameBoy = this.container.querySelector('.n-game-boy');
+    };
+       
 
     startConsole() {
 
-        this.controlFrame.insertAdjacentHTML('afterbegin', template)
+        this.consoleDisplay = new Display(this.nGameBoy);
 
-        this.controlDisplay.renderControlDisplay();
-        this.ControlBottom.renderControlBottom();
+        const renderedDisplay: HTMLDivElement = this.consoleDisplay.renderDisplay();
 
-        setTimeout(() => {  
-            this.removeLoading();
-            // this.createGame();
-        }, 5500)
-    }
-    
-    removeLoading() {
-        this.controlDisplay.removeLoading();
-    }
+        this.core = new CoreController(renderedDisplay)
+        this.controlBottom = new ControlBottom(this.nGameBoy);
+        this.controlBottom.renderControlBottom();
 
-    createGame() {
-        this.controlDisplay.createGame()
-    }
-
-    closeConsole() {
-        const templateHtml = document.querySelector(".n-game-boy");
-        this.controlFrame.removeChild(templateHtml);
-    }
-
-    restartConsole() {
-        this.closeConsole();
-        this.startConsole();
+        this.core.startConsole();
     }
 }

@@ -1,31 +1,16 @@
 import template from "./display.html";
 import "./display.scss";
 
-export class ControlDisplay {
+export class Display {
     
-    constructor(){ };
+    private nGameBoy: HTMLDivElement;
 
-    renderControlDisplay() {
-        const controlFrame = document.querySelector(".n-game-boy");
-        controlFrame.innerHTML += template;
-    }
+    constructor(nGameBoy: HTMLDivElement){        
+        this.nGameBoy = nGameBoy;
+    };
 
-    removeLoading() {
-        const controlDisplay = document.querySelector(".game-boy-control-display");        
-        controlDisplay.replaceChildren('');     
-    }
-
-    createGame() {
-        const controlDisplay: HTMLElement = document.querySelector(".game-boy-control-display");        
-        const iframe = document.createElement('iframe');
-        
-        controlDisplay.style["padding"] = "0 15px";
-        
-        iframe.setAttribute('src', 'https://nintendo.com');    
-        iframe.style["width"] = "100%";
-        iframe.style["height"] = "100%";
-        iframe.style["border"] = "none";
-
-        controlDisplay.appendChild(iframe);
+    renderDisplay(): HTMLDivElement {
+        this.nGameBoy.insertAdjacentHTML('afterbegin', template);
+        return this.nGameBoy.querySelector('.game-boy-display__screen');
     }
 }

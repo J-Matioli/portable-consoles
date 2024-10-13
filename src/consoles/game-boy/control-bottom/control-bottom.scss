@@ -5,10 +5,6 @@
     justify-content: space-around;
     border-radius: 0 0 45px 10px;
     box-shadow: 7px 12px 10px 0px black;
-
-    @media(min-width: 767px) {
-        display: none;
-    }
 }
 
 .gameboy-arrows {
