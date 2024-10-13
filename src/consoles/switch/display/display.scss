@@ -20,57 +20,5 @@
       justify-content: center;
       flex-direction: column;
       position: relative;
-    }
-
-    &__load {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      background-color: #000;
-
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    &__load-bar {
-      margin-top: 10px;
-      height: 2px;
-      background-color: #fff;
-      width: 100%;
-      animation: loading 5s ease;
-      align-self: flex-start;
-  }
-
-  &__load-text {
-    font-family: 'Recursive', sans-serif;
-    color: #fff;
-
-    animation: blink-animation 2s steps(5, start);
-    -webkit-animation: blink-animation 2s steps(5, start);
-    animation-iteration-count: 3;
-    -webkit-animation-iteration-count: 3;
-  }
+    }    
 }
-
-@keyframes loading {
-    0%   {width: 0;}
-    25%  {width: 10%;}
-    50%  {width: 10%;}
-    75%  {width: 65%;}
-    100% {width: 80%;}
-}
-
-@keyframes blink-animation {
-    to {
-      visibility: hidden;
-    }
-  }
-  @-webkit-keyframes blink-animation {
-    to {
-      visibility: hidden;
-    }
-  }

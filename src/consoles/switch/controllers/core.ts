@@ -7,7 +7,7 @@ export default class CoreController {
 
     constructor(display: HTMLDivElement) {
         this.display = display
-        this.load = this.display.querySelector(".switch-control-display__load")
+        this.load = this.display.querySelector(".switch-control-display__loader")
     }
 
     startConsole() {
