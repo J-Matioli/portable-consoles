@@ -5,6 +5,8 @@
     max-width: 355px;
     display: flex;
     flex-direction: column;
+
+    filter: drop-shadow(0 16px 13px rgba(0, 0, 0, 0.5));
     
     @media(min-width: 767px) {
         display: none;      

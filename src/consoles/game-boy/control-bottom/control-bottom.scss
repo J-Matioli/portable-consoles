@@ -3,8 +3,11 @@
     height: 50%;
     display: flex;
     justify-content: space-around;
-    border-radius: 0 0 45px 10px;
-    box-shadow: 7px 12px 10px 0px black;
+    
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 170px 45px;
+    border-bottom-left-radius: 170px 45px;
 }
 
 .gameboy-arrows {
