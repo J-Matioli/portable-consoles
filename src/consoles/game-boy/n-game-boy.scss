@@ -5,6 +5,13 @@
     max-width: 355px;
     display: flex;
     flex-direction: column;
+    border-bottom: 5px solid #353077;
+    border-top: 5px solid #6968d3;
+    background: #565ebb;;
+    border-top-right-radius: 6%;
+    border-top-left-radius: 6%;
+    border-bottom-right-radius: 170px 45px;
+    border-bottom-left-radius: 170px 45px;
 
     filter: drop-shadow(0 16px 13px rgba(0, 0, 0, 0.5));
     

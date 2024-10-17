@@ -1,13 +1,55 @@
-.control-botton {
-    background-color: #039DA4;
+.control-botton {    
     height: 50%;
-    display: flex;
-    justify-content: space-around;
-    
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 170px 45px;
-    border-bottom-left-radius: 170px 45px;
+    position: relative;
+    padding: 0 2vw;
+
+    &__logo {
+        margin: 0 auto 11px auto;
+        display: block;
+        width: fit-content;
+        text-align: center;
+        border: 1px solid rgba(0, 0, 0, 0.322);
+        padding: 0px 10px;
+        border-radius: 10px;
+    }
+   
+    &__buttons {
+        display: flex;
+        width: fit-content;
+    }
+
+    &__action-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        padding: 0 4%;
+    }
+
+    .button {    
+
+        &__content {
+            font-family: Roboto, sans-serif;
+            color: #656565;
+            font-size: 4vw;
+        }
+
+        &--a,
+        &--b {
+            height: 7vw;
+            width: 7vw;
+            max-width: 42px;
+            max-height: 42px;
+        }
+
+        &--a {
+            transform: translate(-29%, 34%);
+        }
+
+        &--b {
+            transform: translateY(-22%);
+        }
+    }
 }
 
 .gameboy-arrows {
