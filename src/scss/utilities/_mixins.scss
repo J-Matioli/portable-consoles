@@ -3,14 +3,10 @@
     &:not([disabled]) {
         cursor: pointer;    
   
-        &:active {
-            
+        &:active {          
             box-shadow: none;
-            border-top: 0;
-            transform: translateY(1px);
   
             &:not(.button--plus) {
-                border-top: 0.2vw solid var(--grey-dark-4) !important;
                 background: var(--grey-dark-2);
             }
         }
