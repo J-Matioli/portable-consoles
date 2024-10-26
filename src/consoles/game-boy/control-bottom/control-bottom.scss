@@ -12,6 +12,18 @@
         padding: 0px 10px;
         border-radius: 10px;
     }
+
+    &__gameboy-arrows {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        width: 15vw;
+        height: 15vw;
+        max-width: 78px;
+        max-height: 78px;
+
+        filter: drop-shadow(0px 4px 2px #1f1f1f);
+    }
    
     &__buttons {
         display: flex;
@@ -27,7 +39,6 @@
     }
 
     .button {    
-
         &__content {
             font-family: Roboto, sans-serif;
             color: #656565;
@@ -52,10 +63,77 @@
     }
 }
 
-.gameboy-arrows {
-    width: 27%;
-}
+.button-square {
+    height: 100%;
+    width: 100%;
+    background-color: var(--grey-dark-3);
+    position: relative;
 
-.gameboy-buttons {
-    width: 27%;
+    &__arrow{
+        background-color: #292929;
+        border-bottom: 2px solid var(--grey-dark-1);
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+
+    &--up, 
+    &--right,
+    &--bottom,
+    &--left {
+        cursor: pointer;
+    }
+
+    &--up {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+        .button-square__arrow {
+            transform: translate(-50%);
+        }
+    }
+
+    &--right {
+        grid-column: 3 / -1;
+        grid-row: 2 / 3;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        .button-square__arrow {
+            transform: translate(-50%) rotate(90deg);
+        }
+    }
+
+    
+    &--middle {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    &--bottom {
+        grid-column: 2 / 3;
+        grid-row: 3 / -1;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        .button-square__arrow {
+            transform: translate(-50%) rotate(180deg);
+        }
+    }
+
+    &--left {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+
+        .button-square__arrow {
+            transform: translate(-50%) rotate(270deg);
+        }
+    }
 }
