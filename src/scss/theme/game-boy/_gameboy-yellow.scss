@@ -1,0 +1,13 @@
+:root.gameboy-yellow-theme {
+    --gb-primary-color: #f4be38;
+    --gb-primary-color-dark: #bb8015;
+    --gb-primary-color-light: #e9d080;
+
+    --gb-primary-color-variant: #f2ae38;
+
+    --gb-primary-gradient: linear-gradient(to bottom, var(--gb-primary-color), var(--gb-primary-color-variant));
+}
+
+body {     
+    background-color: var(--gb-container-background-color);
+}

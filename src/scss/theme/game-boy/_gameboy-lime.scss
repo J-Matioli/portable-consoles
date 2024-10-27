@@ -1,0 +1,13 @@
+:root.gameboy-lime-theme {
+    --gb-primary-color: #93d10e;
+    --gb-primary-color-dark: #187307;
+    --gb-primary-color-light: #c6e755;
+    
+    --gb-primary-color-variant: #46af0d;
+
+    --gb-primary-gradient: linear-gradient(to bottom, var(--gb-primary-color), var(--gb-primary-color-variant));
+}
+
+body {     
+    background-color: var(--gb-container-background-color);
+}
