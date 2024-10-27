@@ -5,6 +5,8 @@ export default class CoreController {
     private isReseting: boolean = false;
     private isStarting: boolean = false;
 
+    private root = document.querySelector(':root');
+
     constructor(display: HTMLDivElement) {
         this.display = display
         this.load = this.display.querySelector(".game-boy-display__loader")
@@ -13,6 +15,8 @@ export default class CoreController {
     startConsole() {
         this.isStarting = true;
         this.addLoading();
+
+        this.root.classList.add(`gameboy-purple-theme`)
 
         setTimeout(() => {  
             this.removeLoading();

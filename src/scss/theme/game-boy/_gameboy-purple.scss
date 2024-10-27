@@ -1,0 +1,16 @@
+:root.gameboy-purple-theme {
+    --gb-container-background-color: #2d2d2d;
+    
+    --gb-primary-color: #565ebb;
+    --gb-primary-color-dark: #353077;
+    --gb-primary-color-light: #6968d3;
+    
+    --gb-primary-color-variant: #5535b9;
+
+    --gb-primary-gradient: linear-gradient(to bottom, var(--gb-primary-color), var(--gb-primary-color-variant));
+
+}
+
+body {     
+    background-color: var(--gb-container-background-color);
+}
