@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
 .game-boy-display {
     height: 50%;
     border: solid 2vw transparent;
@@ -16,5 +19,57 @@
         background-color: #1e1e1e;
         border-bottom: 5px solid #6968d3;
         border-top: 5px solid #444b9d;
+    }
+
+    &__model {
+        position: absolute;
+        font-size: 3.8vw;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: 7%;
+        text-transform: uppercase;
+        text-align: center;
+        
+        @media(min-width: 575px) {
+            font-size: 25px;
+        }
+    }
+
+    &__title {
+        font-family: "PT Sans Narrow", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+        color: #626e72;
+    }
+
+    &__subtitle {
+        font-family: "DynaPuff", system-ui;
+        font-weight: 700;
+        letter-spacing: -1.6vw;
+        display: inline-block;
+
+        &--1 {
+            color: #982742;
+            transform: scale(1.1) rotate(357deg);
+        }
+
+        &--2 {
+            color: #5e5d9f;
+            transform: scale(0.8);
+        }
+
+        &--3 {
+            color: #85a541;
+            transform: rotate(350deg);
+        }
+
+        &--4 {
+            color: #a99d2e;
+            transform: scale(0.8);
+        }
+
+        &--5 {
+            color: #1a8490;
+        }
     }
 }
