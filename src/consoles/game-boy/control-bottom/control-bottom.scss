@@ -30,7 +30,8 @@
         width: fit-content;
     }
 
-    &__action-buttons {
+    &__action-buttons,
+    &__support-buttons {
         display: flex;
         justify-content: space-between;
         width: 100%;
@@ -38,11 +39,40 @@
         padding: 0 4%;
     }
 
+    &__action-buttons {
+        justify-content: space-between;        
+    }
+
+    &__support-buttons {
+        margin-top: 10%;
+        justify-content: center;
+        column-gap: 4%;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__button-label {
+        padding-top: 6px;
+        text-transform: uppercase;
+        font-size: 58%;
+    }
+
     .button {    
         &__content {
             font-family: Roboto, sans-serif;
             color: #656565;
             font-size: 4vw;
+        }
+
+        &--minus {
+            height: 1.6vw;
+            width: 4vw;
+            max-width: 27px;
+            max-height: 20px;
         }
 
         &--a,
