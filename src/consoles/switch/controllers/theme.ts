@@ -10,11 +10,17 @@ export default class ThemeController {
     }
 
     private clearTheme() {
-        this.root.classList.value = "";
+        this.root.classList.remove(...this.getTheme())
+    }
+
+    private getTheme(): string[] {
+        return this.root.classList.value
+            .split(' ')
+            .filter(className => className.includes('switch'));
     }
 
     private setTheme(themeName: string) {
-        this.root.classList.add(`${themeName}-theme`);
+        this.root.classList.add(`switch-${themeName}-theme`);
     }
 
     private parseBtn({className}: HTMLButtonElement): string {
