@@ -29,7 +29,7 @@ export default class NGameBoy {
         const renderedDisplay: HTMLDivElement = this.consoleDisplay.renderDisplay();
 
         this.core = new CoreController(renderedDisplay)
-        this.controlBottom = new ControlBottom(this.nGameBoy);
+        this.controlBottom = new ControlBottom(this.nGameBoy, this.core);
         this.controlBottom.renderControlBottom();
 
         this.core.startConsole();
